@@ -2,6 +2,14 @@
 {
     public class Career: Content
     {
-        public int Courses { get; set; }
+        public IList<CareerItem> Items { get; set; }
+
+        public int TotalCourses => Items.Count;
+
+        public Career()
+        {
+            Items = new List<CareerItem>();
+        }
+        
     }
 }
