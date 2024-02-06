@@ -1,5 +1,5 @@
 ﻿namespace MaoNaMassa.ContentContext{
-    public class CareerItem(int order, string title, string description, Course course)
+    public class CareerItem(int order, string title, string description, Course course): Base
     {
         public int Order { get; set; } = order;
         public string Title { get; set; } = title;

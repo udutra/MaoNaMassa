@@ -30,6 +30,7 @@ public static class Program
         courses.Add(CourseCsharp);
         courses.Add(CourseAspNet);
 
+        
 
         var careers = new List<Career>();
         var career = new Career("Especialista .NET", "especialista-dotnet");
