@@ -1,4 +1,5 @@
 ﻿using MaoNaMassa.NotificationsContext;
+using MaoNaMassa.SharedContext;
 
 namespace MaoNaMassa.ContentContext{
     public class CareerItem : Base

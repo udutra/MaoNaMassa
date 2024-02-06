@@ -1,4 +1,5 @@
 ﻿using MaoNaMassa.ContentContext.Enums;
+using MaoNaMassa.SharedContext;
 
 namespace MaoNaMassa.ContentContext
 {

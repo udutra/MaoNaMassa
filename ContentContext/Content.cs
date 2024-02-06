@@ -1,4 +1,6 @@
-﻿namespace MaoNaMassa.ContentContext
+﻿using MaoNaMassa.SharedContext;
+
+namespace MaoNaMassa.ContentContext
 {
     public abstract class Content(string title, string url):Base 
     {

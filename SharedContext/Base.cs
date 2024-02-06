@@ -1,6 +1,6 @@
 ﻿using MaoNaMassa.NotificationsContext;
 
-namespace MaoNaMassa.ContentContext;
+namespace MaoNaMassa.SharedContext;
 
 public abstract class Base : Notifiable
 {
