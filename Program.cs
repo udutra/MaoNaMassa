@@ -1,9 +1,15 @@
-﻿namespace MaoNaMassa;
+﻿using MaoNaMassa.ContentContext;
+using MaoNaMassa.ContentContext.Enums;
+
+namespace MaoNaMassa;
 
 public static class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        var course = new Course
+        {
+            Level = EContentLevel.Fundamental
+        };
     }
 }
