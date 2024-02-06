@@ -1,15 +1,9 @@
 ﻿namespace MaoNaMassa.ContentContext
 {
-    public abstract class Content
+    public abstract class Content(string title, string url)
     {
-        public Guid Id { get; set; }
-        public string Title { get; set; }
-        public string Url { get; set; }
-
-
-        protected Content()
-        {
-            Id = Guid.NewGuid();
-        }
+        public Guid Id { get; set; } = Guid.NewGuid();
+        public string Title { get; set; } = title;
+        public string Url { get; set; } = url;
     }
 }

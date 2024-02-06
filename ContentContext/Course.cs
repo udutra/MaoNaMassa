@@ -2,18 +2,14 @@
 
 namespace MaoNaMassa.ContentContext
 {
-    public class Course: Content
+    public class Course(string title, string url, string tag, int durationInMinutes, EContentLevel level)
+        : Content(title, url)
     {
-        public string Tag { get; set; }
-        public IList<Module> Modules { get; set; }
-        
-        public int DurationInMinutes { get; set; }
-        
-        public EContentLevel Level { get; set; }
+        public string Tag { get; set; } = tag;
+        public IList<Module> Modules { get; set; } = new List<Module>();
 
-        public Course()
-        {
-            Modules = new List<Module>();
-        }
+        public int DurationInMinutes { get; set; } = durationInMinutes;
+
+        public EContentLevel Level { get; set; } = level;
     }
 }
