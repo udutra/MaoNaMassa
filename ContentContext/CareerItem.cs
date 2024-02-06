@@ -1,9 +1,28 @@
-﻿namespace MaoNaMassa.ContentContext{
-    public class CareerItem(int order, string title, string description, Course course): Base
+﻿using MaoNaMassa.NotificationsContext;
+
+namespace MaoNaMassa.ContentContext{
+    public class CareerItem : Base
     {
-        public int Order { get; set; } = order;
-        public string Title { get; set; } = title;
-        public string Description { get; set; } = description;
-        public Course Course { get; set; } = course ?? throw new Exception("O curso não pode ser nulo");
+        public CareerItem(int order, string title, string description, Course course)
+        {
+            if (course == null)
+            {
+                AddNotification(new Notification("Course", "O curso não pode ser nulo"));
+            }
+            
+            Order = order;
+            Title = title;
+            Description = description;
+            Course = course;
+        }
+
+        public int Order { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public Course Course { get; set; } 
+            
+            
+            
+        
     }
 }

@@ -34,7 +34,7 @@ public static class Program
 
         var careers = new List<Career>();
         var career = new Career("Especialista .NET", "especialista-dotnet");
-        var careerItem = new CareerItem(1, "Comece por aqui", "Descrição", courseOop);
+        var careerItem = new CareerItem(1, "Comece por aqui", "Descrição", null);
         var careerItem2 = new CareerItem(2, "Aprenda OOP", "Descrição2", CourseCsharp);
         var careerItem3 = new CareerItem(3, "Aprenda .NET", "Descrição2", CourseAspNet);
         career.Items.Add(careerItem2);
@@ -48,11 +48,14 @@ public static class Program
             foreach (var item in c.Items.OrderBy(x=>x.Order))
             {
                 Console.WriteLine($"{item.Order} - {item.Title}");
-                Console.WriteLine(item.Course.Title);
-                Console.WriteLine(item.Course.Level);
+                Console.WriteLine(item.Course?.Title);
+                Console.WriteLine(item.Course?.Level);
+
+                foreach (var notification in item.Notifications)
+                {
+                    Console.WriteLine($"{notification.Property} - {notification.Message}");
+                }
             }
         }
-        
-
     }
 }
